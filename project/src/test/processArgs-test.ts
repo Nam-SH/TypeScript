@@ -1,20 +1,10 @@
-// 반환 값 확인
-// process.argv.forEach((val: string, index: number) => {
-//   console.log(index + ": " + val);
-// });
-
-import { getFileNameAndNumber } from "../utils/getFileNameAndNumber";
-
-const [filename, numberOfFakeItems] = getFileNameAndNumber("defualt...", 10);
-console.log(filename, numberOfFakeItems);
-
-/* 
-$ tn processArgs-test.ts
-defualt... 10
-
-$ tn processArgs-test.ts inputData
-inputData 10
-
-$ tn processArgs-test.ts inputData 99999
-inputData 99999
+// ts-node src/test/processArgs-test.ts data/fake.csv 100000
+process.argv.forEach((val: string, index: number) => {
+  console.log(index + ': ' + val)
+})
+/*
+0: C:\scoop\apps\nodejs-lts\current\bin\node_modules\ts-node\dist\bin.js
+1: D:\code\ch08\08-5\src\test\processArgs-test.ts
+2: data/fake.csv
+3: 1000000
 */
